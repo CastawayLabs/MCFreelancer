@@ -23,10 +23,32 @@ html
               a(href='#') Find Work
             li
               a(href='#') Find a Freelancer
-            li
-              a(href='#') Sign in
-            li
-              a(href='#') Sign up
+            //boolean if logged on
+            if (true)
+              li
+                div.dropdown
+                  button#dropdownMenu1.btn.btn-sml.dropdown-toggle(type='button', data-toggle='dropdown')
+                    //replace with actual account name
+                    a Hi Acountname!
+                    span.caret
+                  ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
+                    li(role='presentation')
+                      a(role='menuitem', tabindex='-1', href='#') My Profile
+                    li(role='presentation')
+                      a(role='menuitem', tabindex='-1', href='#') My Contracts
+                    li(role='presentation')
+                      a(role='menuitem', tabindex='-1', href='#') My Settings
+                    li.divider(role='presentation')
+                    li(role='presentation')
+                      a(role='menuitem', tabindex='-1', href='#') Log out
+            else
+              li
+                a(href='#') Sign in
+              li
+                a(href='#') Sign up
+              
+                
+             
 
 
     block content
