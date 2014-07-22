@@ -4,6 +4,12 @@ var app = require('../app');
 
 app.set('port', process.env.PORT || 3000);
 
+var livereload = require('livereload');
+server = livereload.createServer({exts: ['*.*']});
+server.watch("views");
+server.watch("routes");
+server.watch("public");
+
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
