@@ -1,5 +1,26 @@
 extends layout
 
+
 block content
-    h1= title
-    Welcome to #{title}
+    <br><br>
+    .intro-header
+      .container
+        .row
+          .col-lg-12.col-lg-offset-1
+            .intro-message
+              h1 MCFreelancer
+              h3 A cool website ;D
+              hr.intro-divider
+              ul.list-inline.intro-social-buttons
+                li
+                  a.btn.btn-default.btn-lg(href='#')
+                    i.fa.fa-twitter.fa-fw
+                    span.network-name Twitter
+                li
+                  a.btn.btn-default.btn-lg(href='#')
+                    i.fa.fa-github.fa-fw
+                    span.network-name Github
+                li
+                  a.btn.btn-default.btn-lg(href='#')
+                    i.fa.fa-linkedin.fa-fw
+                    span.network-name Linkedin
