@@ -23,12 +23,16 @@ html
               a(href='#') Find Work
             li
               a(href='#') Find a Freelancer
-            //boolean if logged on
+
+            //IF LOGGED ON
+
             if (true)
               li
                 div.dropdown
-                  button#dropdownMenu1.btn.btn-sml.dropdown-toggle(type='button', data-toggle='dropdown')
-                    //replace with actual account name
+                  button#dropdownMenu1.btn.btn-sml.navbar-btn.dropdown-toggle(type='button', data-toggle='dropdown')
+
+                    //REPLACE WITH ACTUAL ACCOUNT NAME
+
                     a Hi Acountname!
                     span.caret
                   ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
@@ -43,13 +47,114 @@ html
                       a(role='menuitem', tabindex='-1', href='#') Log out
             else
               li
-                a(href='#') Sign in
+                <a href="#signInModal" data-toggle="modal" data-target="#signInModal">Sign in</a>
               li
-                a(href='#') Sign up
-              
-                
-             
+                <a href="#signUpModal"data-toggle="modal" data-target="#signUpModal">Sign up</a>
 
+    ////////////////////
+    //SIGN IN POPUP HERE
+
+    <div class="modal fade" id="signInModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">Sign in</h4>
+    </div>
+    <div class="modal-body">
+    <div class="form-group">
+    <label for="emailInput_SI">Email address</label>
+    <input class="form-control" id="emailInput_SI" placeholder="Enter email" type="email">
+    </div>
+    <div class="form-group">
+    <label for="passwordInput_SI">Password</label>
+    <input class="form-control" id="passwordInput_SI" placeholder="Password" type="password">
+    </div>
+
+    //NEED LINK HERE
+
+    <p class="text-right"><a href="#">Forgot password?</a></p>
+    <center> <h5>Or</h5>
+    //SOMEONE DO THIS :D 
+    <a href="#" class="btn btn-success btn-huge">Sign in with Google</a>
+    <a href="#" class="btn btn-default btn-huge">Sign in with Github</a>
+    //AND THIS :D^
+    <br>
+    </center>
+    </div>
+    <br>
+    <div class="modal-footer">
+    <a href="#" class="btn btn-info">Sign in</a>
+    <a href="#" data-dismiss="modal" class="btn">Close</a>
+    </div>
+    </div>
+    </div>
+    </div>          
+                
+    //END OF SIGN IN POPUP         
+    //////////////////////
+
+
+    ////////////////////
+    //SIGN UP POPUP HERE
+
+    <div class="modal fade" id="signUpModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">Sign up</h4>
+    </div>
+    <div class="modal-body">
+
+    <div class="form-group">
+    <label for="nameInput_SU">Name</label>
+    <input class="form-control" id="nameInput_SU" placeholder="Enter your full name" type="text">
+    </div>
+
+    //NEED USERNAME ALREADY EXISTS CHECK WHILE TYPING
+
+    <div class="form-group">
+    <label for="userNameInput_SU">Username</label>
+    <input class="form-control" id="userNameInput_SU" placeholder="Enter your desired username" type="text">
+    </div>
+
+    <div class="form-group">
+    <label for="emailInput_SU">Email address</label>
+    <input class="form-control" id="emailInput_SU" placeholder="Enter email" type="email">
+    </div>
+
+    <div class="form-group">
+    <label for="passwordInput_SU">Password</label>
+    <input class="form-control" id="passwordInput_SU" placeholder="Password" type="password">
+    </div>
+
+    <div class="form-group">
+    <label for="passwordInput_SU">Confirm Password</label>
+    <input class="form-control" id="passwordInput_SU" placeholder="Password" type="password">
+    </div>
+
+    <center> <h5>Or</h5>
+    //SOMEONE DO THIS :D 
+    <a href="#" class="btn btn-success btn-huge">Sign up with Google</a>
+    <a href="#" class="btn btn-default btn-huge">Sign up with Github</a>
+    //AND THIS :D^
+    <br>
+    </center>
+    </div>
+    <br>
+    <div class="modal-footer">
+
+
+    <a href="#" class="btn btn-info">Sign up</a>
+    <a href="#" data-dismiss="modal" class="btn">Close</a>
+    </div>
+    </div>
+    </div>
+    </div>          
+                
+    //END OF SIGN UP POPUP         
+    //////////////////////
 
     block content
 
