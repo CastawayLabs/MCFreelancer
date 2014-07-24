@@ -17,15 +17,61 @@ block content
           li(data-target='#carousel-example-generic', data-slide-to='8')
         
         //NEED 9 DIFFERENT FEATURED
-        div.carousel-inner
-          div.item.active
-            img(src='http://placehold.it/900x400', alt='...')
+        //REPLACE ITEM BACKGROUNDS WITH NICE BACKGROUNDS
+        //REPLACE ICON IMAGES WITH USER ICONS 
 
-            img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; background: url(http://link-to-your/image.jpg) no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);')
-            div.carousel-caption test
-          div.item
-            img(src='http://placehold.it/900x400', alt='...')
-            div.carousel-caption Test
+        div.carousel-inner
+          div.item.active(style='background: url(http://p1.pichost.me/640/25/1477731.jpg) no-repeat;  background-size:cover; width: 900; height:400; position: relative;')
+            
+
+            img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
+
+            h4(style='position: absolute; margin-top: 110px; margin-left:330px;') Freelancer/Servername here
+            h6(style='position: absolute; margin-top: 150px; margin-left:330px;') Rating
+              -var stars = 10;
+
+              ///////////////////////////////////
+              //- REPLACE WITH ACTUAL RATING LATER
+              ///////////////////////////////////
+              -var p = stars*10;
+              .progress(style="position: absolute; margin-top: -18px; margin-left: 80px; width: 220px;")
+                if stars <= 4
+                  .progress-bar.progress-bar-danger(style="width: #{p}%;")
+                    | #{stars}/10
+                else if stars > 4 && stars <= 7.5
+                  .progress-bar.progress-bar-warning(style="width: #{p}%;")
+                    | #{stars}/10
+                else if stars > 7.5 && stars <=10
+                  .progress-bar.progress-bar-success(style="width: #{p}%;")
+                    | #{stars}/10
+            div(style='position: absolute; text-align: left; margin-top: 210px; margin-left: 330px; width: 372px; height: 100px; overflow: auto;') Description here herhe huwehfsoidhfosi dhsiodhf sopdifh sodpfihsdopifh sodpfihs dofihsdpofihsd poifhsdopifh sdopfihsdpiof hsdopfihsdpofihsdopifhopsihoisdf oishdfopih sdoifhsdopi fhosidhfoisdhfiohs odifhoisdhof hsodfhso idfhosi dfiphsdofi hsdopfh sdopfhsopdfho psdhfopsdfhi opsdhfoihsdiofhsdohi
+
+            
+
+          div.item(style='background: url(http://p1.pichost.me/640/25/1477731.jpg) no-repeat;  background-size:cover; width: 900; height:400; position: relative;')
+            
+
+            img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
+
+            h4(style='position: absolute; margin-top: 110px; margin-left:330px;') Freelancer/Servername here
+            h6(style='position: absolute; margin-top: 150px; margin-left:330px;') Rating
+              -var stars = 10;
+
+              ///////////////////////////////////
+              //- REPLACE WITH ACTUAL RATING LATER
+              ///////////////////////////////////
+              -var p = stars*10;
+              .progress(style="position: absolute; margin-top: -18px; margin-left: 80px; width: 220px;")
+                if stars <= 4
+                  .progress-bar.progress-bar-danger(style="width: #{p}%;")
+                    | #{stars}/10
+                else if stars > 4 && stars <= 7.5
+                  .progress-bar.progress-bar-warning(style="width: #{p}%;")
+                    | #{stars}/10
+                else if stars > 7.5 && stars <=10
+                  .progress-bar.progress-bar-success(style="width: #{p}%;")
+                    | #{stars}/10
+            div(style='position: absolute; text-align: left; margin-top: 210px; margin-left: 330px; width: 372px; height: 100px; overflow: auto;') Description here herhe huwehfsoidhfosi dhsiodhf sopdifh sodpfihsdopifh sodpfihs dofihsdpofihsd poifhsdopifh sdopfihsdpiof hsdopfihsdpofihsdopifhopsihoisdf oishdfopih sdoifhsdopi fhosidhfoisdhfiohs odifhoisdhof hsodfhso idfhosi dfiphsdofi hsdopfh sdopfhsopdfho psdhfopsdfhi opsdhfoihsdiofhsdohi
           div.item
             img(src='http://placehold.it/900x400', alt='...')
             div.carousel-caption Test
@@ -53,8 +99,6 @@ block content
           span.glyphicon.glyphicon-chevron-left
         a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right
-
-
 
     
 
