@@ -1,6 +1,64 @@
 extends layout
 
 block content
+    <br><br><br><br>
+    div#container(style='width: 900; height:400; text-align:center; margin:auto;')
+      div#carousel-example-generic.carousel.slide(data-ride='carousel')
+        
+        ol.carousel-indicators
+          li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          li(data-target='#carousel-example-generic', data-slide-to='1')
+          li(data-target='#carousel-example-generic', data-slide-to='2')
+          li(data-target='#carousel-example-generic', data-slide-to='3')
+          li(data-target='#carousel-example-generic', data-slide-to='4')
+          li(data-target='#carousel-example-generic', data-slide-to='5')
+          li(data-target='#carousel-example-generic', data-slide-to='6')
+          li(data-target='#carousel-example-generic', data-slide-to='7')
+          li(data-target='#carousel-example-generic', data-slide-to='8')
+        
+        //NEED 9 DIFFERENT FEATURED
+        div.carousel-inner
+          div.item.active
+            img(src='http://placehold.it/900x400', alt='...')
+
+            img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; background: url(http://link-to-your/image.jpg) no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);')
+            div.carousel-caption test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          div.item
+            img(src='http://placehold.it/900x400', alt='...')
+            div.carousel-caption Test
+          | Featured Freelancers and Servers
+        // Controls
+        a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+
+
+
+    
+
+
     <br><br>
     .intro-header
       .container
