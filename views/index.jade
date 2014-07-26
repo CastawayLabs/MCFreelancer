@@ -25,7 +25,8 @@ block content
 
             img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
 
-            h4(style='position: absolute; margin-top: 110px; margin-left:330px;') Freelancer/Servername here
+            a(href="#linktopage", style="color: #424863")
+              h4(style='position: absolute; margin-top: 110px; margin-left:330px;', href='#linktopage') Freelancer/Servername here
             h6(style='position: absolute; margin-top: 150px; margin-left:330px;') Rating
               -var stars = 10;
 
@@ -51,7 +52,8 @@ block content
 
               img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
 
-              h4(style='position: absolute; margin-top: 110px; margin-left:330px;') Freelancer/Servername here
+              a(href="#linktopage", style="color: #424863")
+                h4(style='position: absolute; margin-top: 110px; margin-left:330px;') Freelancer/Servername here
               h6(style='position: absolute; margin-top: 150px; margin-left:330px;') Rating
                 -var stars = 10;
 
@@ -76,7 +78,50 @@ block content
         a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right
 
-    
+    ///////////////////
+    //Stats start
+    //////////////////
+
+    div.stats(style=" margin: 40px auto 0 auto; height: 160px; width: 1090px;")
+        -var programmers = 0;
+        -var moderators = 0;
+        -var managers = 0;
+        -var web = 0;
+        -var tusers = 1231;
+        -var cprojs = 123;
+        div.programmers(style=" position: absolute; height: 100px; width: 100px; margin: 15px auto 15px 0px; text-align: center;")
+            a(class="btn" href="#")
+                img(src="/icons/pc.svg", height="100")
+            <br>
+            p(style="position: absolute; margin: 0px auto 0 60px; font-size: 15px; font-weight: bold;") #{programmers}
+            p(style="position: absolute; margin-left: 42px;") <br> Server Developers
+
+        div.moderators(style=" position: absolute; height: 100px; width: 100px; margin: 15px auto 15px 250px; text-align: center;")
+            a(class="btn" href="#")
+                img(src="/icons/clipboard.svg", height="100", width="100")
+            <br>
+            p(style="position: absolute; margin: 0px auto 0 35px; font-size: 15px; font-weight: bold;") #{moderators} 
+            p(style="position: absolute; margin-left: 28px;")<br> Server Staff
+
+        div.managers(style=" position: absolute; height: 100px; width: 100px; margin: 15px auto 15px 470px; text-align: center;")
+            a(class="btn" href="#")
+                img(src="/icons/settings.svg", height="100", width="100")
+            <br>
+            p(style="position: absolute; margin: 0px auto 0 40px; font-size: 15px; font-weight: bold;") #{managers} 
+            p(style="position: absolute; margin-left: 28px;")<br> Server Managers
+
+        div.web(style=" position: absolute; height: 100px; width: 100px; margin: 15px auto 15px 670px; text-align: center;")
+            a(class="btn" href="#")
+                img(src="/icons/user-interface.svg", height="100", width="100")
+            <br>
+            p(style="position: absolute; margin: 0px auto 0 40px; font-size: 15px; font-weight: bold;") #{web} 
+            p(style="position: absolute; margin-left: 23px;")<br> Web Developers
+
+        div.stats(style=" position: absolute; height: 100px; width: 200px; margin: 15px auto 15px 830px; text-align: center;")
+            div.tusers(style="position: absolute; margin: 35px;") 
+                p(style="font-weight: bold;") #{tusers} users have joined.
+            div.cprojs(style="position: absolute; margin: 110px 15px 15px 15px; ") 
+                p(style="font-weight: bold;") #{cprojs} projects have been completed.
 
 
     <br><br>
