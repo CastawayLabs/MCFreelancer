@@ -1,5 +1,6 @@
 extends layout
 
+
 block content
     <br><br><br><br>
     div#container(style='width: 900; height:400; text-align:center; margin:auto;')
@@ -80,15 +81,14 @@ block content
 
     ///////////////////
     //Stats start
-    //////////////////
-
-    div.stats(style=" margin: 40px auto 0 auto; height: 160px; width: 1090px;")
+    //////////////////3
+    div.stats(style=" margin: 40px auto 0 auto; height: 160px; width: 1030px;")
         -var programmers = 0;
         -var moderators = 0;
         -var managers = 0;
         -var web = 0;
-        -var tusers = 1231;
-        -var cprojs = 123;
+        -var tusers = 0;
+        -var cprojs = 0;
         div.programmers(style=" position: absolute; height: 100px; width: 100px; margin: 15px auto 15px 0px; text-align: center;")
             a(class="btn" href="#")
                 img(src="/icons/pc.svg", height="100")
@@ -119,30 +119,31 @@ block content
 
         div.stats(style=" position: absolute; height: 100px; width: 200px; margin: 15px auto 15px 830px; text-align: center;")
             div.tusers(style="position: absolute; margin: 35px;") 
-                p(style="font-weight: bold;") #{tusers} users have joined.
+                p <strong>#{tusers}</strong>&nbsp;&nbsp;&nbsp;&nbsp; users have joined.
             div.cprojs(style="position: absolute; margin: 110px 15px 15px 15px; ") 
-                p(style="font-weight: bold;") #{cprojs} projects have been completed.
+                p <strong>#{cprojs}</strong> &nbsp;&nbsp;&nbsp;&nbsp;projects have been completed.
 
 
-    <br><br>
-    .intro-header
-      .container
-        .row
-          .col-lg-12.col-lg-offset-1
-            .intro-message
-              h1 MCFreelancer
-              h3 A cool website ;D
-              hr.intro-divider
-              ul.list-inline.intro-social-buttons
-                li
-                  a.btn.btn-default.btn-lg(href='#')
-                    i.fa.fa-twitter.fa-fw
-                    span.network-name Twitter
-                li
-                  a.btn.btn-default.btn-lg(href='#')
-                    i.fa.fa-github.fa-fw
-                    span.network-name Github
-                li
-                  a.btn.btn-default.btn-lg(href='#')
-                    i.fa.fa-linkedin.fa-fw
-                    span.network-name Linkedin
+
+    ///////////////////////
+    //HOW IT WORKS MINI
+    //////////////////////
+
+
+    <br><br><br><br><br>
+    div.howmini(style="height: 120px; width: 1400px; background-color: rgba(0, 0, 0, .2);; box-shadow: 0 0 8px rgba(0, 0, 0, .8);")
+        div.hire(style="height: 100px; width:200px; margin-left: 200px; margin-top: 10px; background-color: rgba(0, 0, 0, .19); position: absolute; box-shadow: 0 0 8px rgba(0, 0, 0, .8);")
+
+            <a id="popoverHire" class="btn btn-primary" href="#linkToLongHire" data-content="Hire text" rel="popover" data-placement="top" data-original-title="Hire" data-trigger="hover" style="width: 100px; margin: 30px 50px auto 50px; ">Hire</a>
+
+        div.collaborate(style="height: 100px; width:200px; margin-left: 575px; margin-top: 10px; background-color: rgba(0, 0, 0, .19);  position: absolute; box-shadow: 0 0 8px rgba(0, 0, 0, .8);")
+
+            <a id="popoverCollaborate" class="btn btn-primary" href="#linkToLongCollab" data-content="Collaborate text" rel="popover" data-placement="top" data-original-title="Collaborate" data-trigger="hover" style="width: 108px; margin: 30px 50px auto 50px;">Collaborate</a>
+
+        div.pay(style="height: 100px; width:200px; margin-left: 950px;  margin-top: 10px;background-color: rgba(0, 0, 0, .19);  position: absolute; box-shadow: 0 0 8px rgba(0, 0, 0, .8);")
+
+            <a id="popoverPay" class="btn btn-primary" href="#linkToLongPay" data-content="Pay text" rel="popover" data-placement="top" data-original-title="Pay Safely" data-trigger="hover" style="width: 100px; margin: 30px 50px auto 50px;">Pay Safely</a>
+
+
+
+
