@@ -21,7 +21,7 @@ block content
         //REPLACE ICON IMAGES WITH USER ICONS 
 
         div.carousel-inner
-          div.item.active(style='background: url(/images/sliderbg_2.jpg) no-repeat;  background-size:cover; width: 900; height:400;')
+          div.item.active(style='background: url(/images/sliderbg_1.jpg) no-repeat;  background-size:cover; width: 900; height:400;')
             
 
             img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
@@ -47,9 +47,9 @@ block content
                     | #{stars}/10
             div(style='position: absolute; text-align: left; margin-top: 210px; margin-left: 330px; width: 372px; height: 100px; overflow: auto;') Description here herhe huwehfsoidhfosi dhsiodhf sopdifh sodpfihsdopifh sodpfihs dofihsdpofihsd poifhsdopifh sdopfihsdpiof hsdopfihsdpofihsdopifhopsihoisdf oishdfopih sdoifhsdopi fhosidhfoisdhfiohs odifhoisdhof hsodfhso idfhosi dfiphsdofi hsdopfh sdopfhsopdfho psdhfopsdfhi opsdhfoihsdiofhsdohi
 
-          -for(var i = 0; i < 8; i++)
-            
-            div.item(style='background: url(/images/sliderbg_1.jpg) no-repeat;  background-size:cover; width: 900; height:400;')
+          -for(var i = 1; i < 9; i++)
+
+            div.item(style='background: url(/images/sliderbg_#{i%3+1}.jpg) no-repeat;  background-size:cover; width: 900; height:400;')
               
 
               img(src='http://placehold.it/900x400', alt='...', style='width: 200px; height: 200px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px; no-repeat; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); position: absolute; margin-top: 95px; margin-left:110px;')
