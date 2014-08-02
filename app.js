@@ -19,6 +19,22 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+
+// less support on the fly
+app.use(require('less-middleware')(path.join(__dirname, 'public/less'),{
+  // display debug info if in dev mode
+  debug: app.get('env') === 'development' ? true : false,
+  dest: path.join(__dirname, 'public'),
+  force: app.get('env') === 'development' ? true : false,
+  once: app.get('env') === 'production' ? true : false,
+  // see: http://git.io/x_5jrw
+  preprocess: {
+    path: function (pathname) {
+      return pathname.replace('/css/', '/');
+    }
+  }
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
