@@ -1,0 +1,79 @@
+/*
+ *
+ */
+
+@import "bootstrap/variables.less";
+@import "flat-ui/variables.less";
+@import "bootstrap/mixins.less";
+
+#content-index {
+  margin-top: @navbar-height-base;
+
+  .container {
+    max-width: 900px;
+  }
+}
+
+#carousel-featured {
+  height: 480px;
+  margin-top: @navbar-height-base;
+
+  .item {
+    height: 100%;
+    padding: @navbar-height-base;
+
+    // This whole charade is for vertically centering
+    // slide content within the slide
+    & > .item-inner {
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+
+      & > .item-content {
+        width: 100%;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+
+        a.thumbnail {
+          display: inline-block;
+          width: auto;
+          border-radius: 100%;
+        }
+
+        .progress {
+          display: inline-block;
+          width: 65%;
+          margin: 0;
+          margin-left: 1%;
+        }
+
+        .description > p {
+          margin-top: (@navbar-height-base / 2);
+          font-size: (@font-size-base * 0.85);
+        }
+      }
+    }
+
+    &.bg1 {
+      background-image: url('../images/sliderbg_1.jpg');
+      color: #fff;
+    }
+    &.bg2 {
+      background-image: url('../images/sliderbg_2.jpg');
+    }
+    &.bg3 {
+      background-image: url('../images/sliderbg_3.jpg');
+    }
+  }
+}
+
+footer {
+  margin-top: @navbar-height-base;
+}
