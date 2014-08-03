@@ -4,167 +4,126 @@ html
     title= title
     link(rel='stylesheet', href='/css/bootstrap.css')
     link(rel='stylesheet', href='/css/flat-ui.css')
+    link(rel='stylesheet', href='/css/icomoon.css')
   body
-    //Navigation 
-    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
-      .container
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#') MCFreelancer
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#') How it works
-            li
-              a(href='#') Find Work
-            li
-              a(href='#') Find a Freelancer
-
-            //IF LOGGED ON
-
-            if (false)
+    //---------------------------------------------------------------------------------------------------------HEADER
+    header
+      nav(role='navigation').navbar.navbar-default.navbar-fixed-top#navbar-main
+        .container
+          .navbar-header
+            button(type='button', data-toggle='collapse', data-target='#navbar-main .navbar-collapse').navbar-toggle
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a(href='#').navbar-brand MCFreelancer
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
               li
-                div.dropdown
-                  button#dropdownMenu1.btn.btn-sml.navbar-btn.dropdown-toggle(type='button', data-toggle='dropdown')
-
-                    //REPLACE WITH ACTUAL ACCOUNT NAME
-
-                    a Hi Acountname!
-                    span.caret
-                  ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
+                a(href='#') How It Works
+              li
+                a(href='#') Find Work
+              li
+                a(href='#') Find Freelancers
+              //- If user is logged in display the menu
+              if (false)
+                li.div-dropdown
+                  button(type='button', data-toggle='dropdown').btn.btn-sml.navbar-btn.dropdown-toggle#dropdown-user
+                    span.glyphicon.glyphicon-user
+                    |  Username
+                  ul(role='menu', aria-labelledby="#dropdown-user").dropdown-menu
                     li(role='presentation')
-                      a(role='menuitem', tabindex='-1', href='#') My Profile
+                      a(role='menuitem', tabindex='-1', href='#') Profile
                     li(role='presentation')
-                      a(role='menuitem', tabindex='-1', href='#') My Contracts
+                      a(role='menuitem', tabindex='-1', href='#') Contracts
                     li(role='presentation')
-                      a(role='menuitem', tabindex='-1', href='#') My Settings
+                      a(role='menuitem', tabindex='-1', href='#') Settings
                     li.divider(role='presentation')
                     li(role='presentation')
-                      a(role='menuitem', tabindex='-1', href='#') Log out
-            else
-              li
-                <a href="#signInModal" data-toggle="modal" data-target="#signInModal">Sign in</a>
-              li
-                <a href="#signUpModal"data-toggle="modal" data-target="#signUpModal">Sign up</a>
-
-    ////////////////////
-    //SIGN IN POPUP HERE
-
-    <div class="modal fade" id="signInModal">
-    <div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 class="modal-title">Sign in</h4>
-    </div>
-    <div class="modal-body">
-    <div class="form-group">
-    <label for="emailInput_SI">Email address</label>
-    <input class="form-control" id="emailInput_SI" placeholder="Enter email" type="email">
-    </div>
-    <div class="form-group">
-    <label for="passwordInput_SI">Password</label>
-    <input class="form-control" id="passwordInput_SI" placeholder="Password" type="password">
-    </div>
-
-    //NEED LINK HERE
-
-    <p class="text-right"><a href="#">Forgot password?</a></p>
-    <center> <h5>Or</h5>
-    //SOMEONE DO THIS :D 
-    <a href="#" class="btn btn-success btn-huge">Sign in with Google</a>
-    <a href="#" class="btn btn-default btn-huge">Sign in with Github</a>
-    //AND THIS :D^
-    <br>
-    </center>
-    </div>
-    <br>
-    <div class="modal-footer">
-    <a href="#" class="btn btn-info">Sign in</a>
-    <a href="#" data-dismiss="modal" class="btn">Close</a>
-    </div>
-    </div>
-    </div>
-    </div>          
-                
-    //END OF SIGN IN POPUP         
-    //////////////////////
-
-
-    ////////////////////
-    //SIGN UP POPUP HERE
-
-    <div class="modal fade" id="signUpModal">
-    <div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 class="modal-title">Sign up</h4>
-    </div>
-    <div class="modal-body">
-
-    <div class="form-group">
-    <label for="nameInput_SU">Name</label>
-    <input class="form-control" id="nameInput_SU" placeholder="Enter your full name" type="text">
-    </div>
-
-    //NEED USERNAME ALREADY EXISTS CHECK WHILE TYPING
-
-    <div class="form-group">
-    <label for="userNameInput_SU">Username</label>
-    <input class="form-control" id="userNameInput_SU" placeholder="Enter your desired username" type="text">
-    </div>
-
-    <div class="form-group">
-    <label for="emailInput_SU">Email address</label>
-    <input class="form-control" id="emailInput_SU" placeholder="Enter email" type="email">
-    </div>
-
-    <div class="form-group">
-    <label for="passwordInput_SU">Password</label>
-    <input class="form-control" id="passwordInput_SU" placeholder="Password" type="password">
-    </div>
-
-    <div class="form-group">
-    <label for="passwordInput_SU">Confirm Password</label>
-    <input class="form-control" id="passwordInput_SU" placeholder="Password" type="password">
-    </div>
-
-    <center> <h5>Or</h5>
-    //SOMEONE DO THIS :D 
-    <a href="#" class="btn btn-success btn-huge">Sign up with Google</a>
-    <a href="#" class="btn btn-default btn-huge">Sign up with Github</a>
-    //AND THIS :D^
-    <br>
-    </center>
-    </div>
-    <br>
-    <div class="modal-footer">
-
-
-    <a href="#" class="btn btn-info">Sign up</a>
-    <a href="#" data-dismiss="modal" class="btn">Close</a>
-    </div>
-    </div>
-    </div>
-    </div>          
-                
-    //END OF SIGN UP POPUP         
-    //////////////////////
-
+                      a(role='menuitem', tabindex='-1', href='#') Log Out
+              else
+                li
+                  a(href='#modal-sign-in', data-toggle='modal', data-target='#modal-sign-in') Sign In
+                li
+                  a(href='#modal-sign-up', data-toggle='modal', data-target='#modal-sign-up') Sign Up
+    //--------------------------------------------------------------------------------------------------CONTENT BLOCK
     block content
-    <br><br><br><br>
-
+    //---------------------------------------------------------------------------------------------------------MODALS
+    .modal.fade#modal-sign-in
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button(type='button', data-dismiss='modal', aria-hidden='true').close ×
+            h4.modal-title Sign In
+          .modal-body
+            form(role='form')#form-sign-in
+              .form-group
+                label(for='input-email-sign-in') Email Address
+                input(type='email').form-control#input-email-sign-in
+              .form-group
+                label(for='input-password-sign-in') Password
+                input(type='password').form-control#input-password-sign-in
+              .row
+                .col-lg-6
+                  label(for='checkbox-remember-sign-in', style='margin:6px 16px').checkbox
+                    input(type='checkbox', value='', data-toggle='checkbox')#checkbox-remember-sign-in
+                    | Remember me
+                .col-lg-6
+                  p(style='margin:0 16px').text-right
+                    small
+                      a(href='#') Forgot password?
+            .text-center
+              a(href='#').btn.btn-lg.btn-embossed.btn-primary
+                span.icomoon-google-plus-4
+                |&nbsp; Sign in with Google
+              | &nbsp;
+              a(href='#').btn.btn-lg.btn-embossed.btn-default
+                span.icomoon-github-3
+                | &nbsp; Sign in with GitHub
+          .modal-footer
+            button(type='button').btn.btn-info Sign In
+            button(type='button', data-dismiss='modal').btn Close
+    //-----------------------
+    .modal.fade#modal-sign-up
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button(type='button', data-dismiss='modal', aria-hidden='true').close ×
+            h4.modal-title Sign Up
+          .modal-body
+            form(role='form')#form-sign-up
+              .form-group
+                label(for='input-username-sign-up') Username
+                input(type='text').form-control#input-username-sign-up
+              .form-group
+                label(for='input-email-sign-up') Email Address
+                input(type='email').form-control#input-email-sign-up
+              .form-group
+                label(for='input-password-sign-up') Password
+                input(type='password').form-control#input-password-sign-up
+              .form-group
+                label(for='input-repeat-password-sign-up') Confirm Password
+                input(type='password').form-control#input-repeat-password-sign-up
+            .text-center
+              a(href='#').btn.btn-lg.btn-embossed.btn-primary
+                span.icomoon-google-plus-4
+                |&nbsp; Sign Up with Google
+              | &nbsp;
+              a(href='#').btn.btn-lg.btn-embossed.btn-default
+                span.icomoon-github-3
+                | &nbsp; Sign Up with GitHub
+          .modal-footer
+            button(type='button').btn.btn-info Sign Up
+            button(type='button', data-dismiss='modal').btn Close
+    //---------------------------------------------------------------------------------------------------------FOOTER
     footer
-        .container
-            .row
-              .col-lg-12
-                p.copyright.text-muted.small(style="text-align:center;") Copyright © Castaway Labs, LLC 2014. All Rights Reserved
-    
-    script(src='js/jquery-2.0.3.min.js')
-    script(src='js/bootstrap.min.js')
+      .container
+        .row
+          .col-lg-12
+            p.copyright.text-muted.small(style="text-align:center;")
+              | Copyright © Castaway Labs, LLC 2014. All Rights Reserved
+    //-----------------------------------------------------------------------------------------------------JAVASCRIPT
+    script(src='js/jquery/jquery-2.1.1.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/flat-ui/flatui-checkbox.js')
     script(src='js/h-popovers.js')
