@@ -68,4 +68,4 @@ $RECYCLE.BIN/
 # At this point we're basically using /public/css as cache only
 # Since all css is compiled from less on runtime, let's just
 # ignore the public/css directory
-public/css/
+public/css/*.css
