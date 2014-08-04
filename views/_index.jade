@@ -5,25 +5,27 @@ block stylesheets
 
 block content
   #content-index
-    .container
-      //- data-interval=false prevents carousel from auto-rotating, use for debug only
-      //- set to non-zero integer (milisecond) to make the carousel cycle again
-      div(data-ride='carousel', data-interval='5000').carousel.slide#carousel-featured
-        ol.carousel-indicators
-          li(data-target='#carousel-featured', data-slide-to='0').active
-          li(data-target='#carousel-featured', data-slide-to='1')
-          li(data-target='#carousel-featured', data-slide-to='2')
-          li(data-target='#carousel-featured', data-slide-to='3')
-          li(data-target='#carousel-featured', data-slide-to='4')
-          li(data-target='#carousel-featured', data-slide-to='5')
-          li(data-target='#carousel-featured', data-slide-to='6')
-          li(data-target='#carousel-featured', data-slide-to='7')
-          li(data-target='#carousel-featured', data-slide-to='8')
-        //- We need 9 different 'featured'
-        //- Replace item backgrounds with nice backgrounds
-        //- Replace placeholder images with user avatars/logos
-        .carousel-inner
-          .item.bg1.active
+    //- data-interval=false prevents carousel from auto-rotating, use for debug only
+    //- set to non-zero integer (milisecond) to make the carousel cycle again
+    //-----------------------------------------------------------------------------------------------------CAROUSEL
+    div(data-ride='carousel', data-interval='5000').carousel.slide#carousel-featured
+      ol.carousel-indicators
+        li(data-target='#carousel-featured', data-slide-to='0').active
+        li(data-target='#carousel-featured', data-slide-to='1')
+        li(data-target='#carousel-featured', data-slide-to='2')
+        li(data-target='#carousel-featured', data-slide-to='3')
+        li(data-target='#carousel-featured', data-slide-to='4')
+        li(data-target='#carousel-featured', data-slide-to='5')
+        li(data-target='#carousel-featured', data-slide-to='6')
+        li(data-target='#carousel-featured', data-slide-to='7')
+        li(data-target='#carousel-featured', data-slide-to='8')
+      //- We need 9 different 'featured'
+      //- Replace item backgrounds with nice backgrounds
+      //- Replace placeholder images with user avatars/logos
+      .carousel-inner
+        //-------------------SLIDE-1
+        .item.bg1.active
+          .container
             .item-inner
               .item-content
                 .row
@@ -54,8 +56,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg2
+        //-------------------SLIDE-2
+        .item.bg2
+          .container
             .item-inner
               .item-content
                 .row
@@ -86,8 +89,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg3
+        //-------------------SLIDE-3
+        .item.bg3
+          .container
             .item-inner
               .item-content
                 .row
@@ -118,8 +122,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg1
+        //-------------------SLIDE-4
+        .item.bg1
+          .container
             .item-inner
               .item-content
                 .row
@@ -150,8 +155,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg2
+        //-------------------SLIDE-5
+        .item.bg2
+          .container
             .item-inner
               .item-content
                 .row
@@ -182,8 +188,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg3
+        //-------------------SLIDE-6
+        .item.bg3
+          .container
             .item-inner
               .item-content
                 .row
@@ -214,8 +221,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg1
+        //-------------------SLIDE-7
+        .item.bg1
+          .container
             .item-inner
               .item-content
                 .row
@@ -246,8 +254,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg2
+        //-------------------SLIDE-8
+        .item.bg2
+          .container
             .item-inner
               .item-content
                 .row
@@ -278,8 +287,9 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
-          .item.bg3
+        //-------------------SLIDE-9
+        .item.bg3
+          .container
             .item-inner
               .item-content
                 .row
@@ -310,4 +320,46 @@ block content
                         | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
                         | mi quis egestas varius. Integer placerat turpis eget ligula
                         | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-          //-------------------
+      a(role='button', data-slide='prev', href='#carousel-featured').carousel-control.left
+        span.glyphicon.glyphicon-chevron-left
+      a(role='button', data-slide='next', href='#carousel-featured').carousel-control.right
+        span.glyphicon.glyphicon-chevron-right
+    //--------------------------------------------------------------------------------------------------------STATS
+    #stats-container
+      -var programmers = 0;
+      -var moderators = 0;
+      -var managers = 0;
+      -var webdevs = 0;
+      -var totalUsers = 0;
+      -var completedProjects = 0;
+      .container
+        .row
+          .col-md-2
+            a(href='#').cat-thumb
+              img(src='icons/pc.svg')
+            h4.cat-count #{programmers}
+            p.cat-title Server Developers
+          .col-md-2
+            a(href='#').cat-thumb
+              img(src='icons/clipboard.svg')
+            h4.cat-count #{moderators}
+            p.cat-title Server Staff
+          .col-md-2
+            a(href='#').cat-thumb
+              img(src='icons/settings.svg')
+            h4.cat-count #{managers}
+            p.cat-title Server Managers
+          .col-md-2
+            a(href='#').cat-thumb
+              img(src='icons/user-interface.svg')
+            h4.cat-count #{webdevs}
+            p.cat-title Web Developers
+          .col-md-4.text-left
+            h4.cat-count
+              span.icomoon-users
+              |  #{totalUsers}
+              span.follow  users have joined
+            h4.cat-count
+              span.icomoon-signup
+              |  #{completedProjects}
+              span.follow  projects have been completed
