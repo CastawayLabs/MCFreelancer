@@ -30,7 +30,11 @@ app.use(require('less-middleware')(path.join(__dirname, 'public/less'),{
   // see: http://git.io/x_5jrw
   preprocess: {
     path: function (pathname) {
-      return pathname.replace('/css/', '/');
+      if (path.sep === '\\') {
+        return pathname.replace('\\css\\', '\\');
+      } else {
+        return pathname.replace('/css/', '/');
+      }
     }
   }
 }));
