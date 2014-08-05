@@ -3,6 +3,9 @@ extends layout
 block stylesheets
   link(rel='stylesheet', href='/css/index.css')
 
+block scripts
+  script(src='js/index.js')
+
 block content
   #content-index
     //- data-interval=false prevents carousel from auto-rotating, use for debug only
@@ -363,3 +366,22 @@ block content
               span.icomoon-signup
               |  #{completedProjects}
               span.follow  projects have been completed
+    //-------------------------------------------------------------------------------------------------HOW IT WORKS
+    #how-it-works
+      .container
+        .row
+          .col-md-4
+            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
+              data-content='Lorem ipsum dolor set amet.').btn.btn-inverse.btn-hg.btn-embossed.btn-block
+                span.icomoon-users-2
+                |  Hire
+          .col-md-4
+            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
+              data-content='Lorem ipsum dolor set amet.').btn.btn-info.btn-hg.btn-embossed.btn-block
+                span.icomoon-bubbles-4
+                |  Collaborate
+          .col-md-4
+            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
+              data-content='Lorem ipsum dolor set amet.').btn.btn-success.btn-hg.btn-embossed.btn-block
+                span.icomoon-paypal-3
+                |  Pay Safely
