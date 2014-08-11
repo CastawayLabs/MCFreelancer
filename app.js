@@ -6,7 +6,7 @@ var   express = require('express'),
       bodyParser = require('body-parser'),
       mongoose = require('mongoose'),
       routes = require('./routes'),
-      //models = require('./models'),
+      models = require('./models'),
       passport = require('passport');
 
 var app = express();
