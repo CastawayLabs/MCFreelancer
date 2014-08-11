@@ -6,12 +6,14 @@ var   express = require('express'),
       bodyParser = require('body-parser'),
       mongoose = require('mongoose'),
       routes = require('./routes'),
-      models = require('./models'),
+      //models = require('./models'),
       passport = require('passport');
 
 var app = express();
 
+//Routes
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', routes);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
