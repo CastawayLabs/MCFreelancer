@@ -4,7 +4,10 @@ var schema = mongoose.Schema;
 var ObjectId = schema.ObjectId;
 
 var scheme = schema({
-	sent: Date,
+	sent: {
+		type: Date,
+		default: Date.now
+	},
 	message: String,
 	user: {
 		type: ObjectId,

@@ -6,4 +6,6 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'MCFreelancer' });
 });
 
-module.exports = router;
+router.use('/auth', require('./auth').router);
+
+exports.router = router;

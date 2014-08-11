@@ -3,5 +3,6 @@ module.exports = {
 	Message: require('./Message').Message,
 	ProjectQuote: require('./ProjectQuote').ProjectQuote,
 	Milestone: require('./Milestone').Milestone,
-	Project: require('./Project').Project
+	Project: require('./Project').Project,
+	ProjectMember: require('./ProjectMember').ProjectMember
 }
