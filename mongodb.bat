@@ -1,1 +1,1 @@
-C:\'Program Files'\MongoDB\bin\mongod.exe
+C:\"Program Files"\MongoDB\bin\mongod.exe
