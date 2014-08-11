@@ -1,3 +1,8 @@
+var mongoose = require('mongoose');
+
+var schema = mongoose.Schema;
+var ObjectId = schema.ObjectId;
+
 var scheme = schema({
 	name: String,
 	date: Date,
@@ -33,3 +38,5 @@ var scheme = schema({
 	reported: String,
 	report_message: String
 });
+
+exports.Project = mongoose.model("Project", scheme);

@@ -4,12 +4,13 @@ var   express = require('express'),
       logger = require('morgan'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
-      mongoose = require('mongoose');
-
-var routes = require('./routes/index');
+      mongoose = require('mongoose'),
+      routes = require('./routes'),
+      models = require('./models'),
+      passport = require('passport');
 
 var app = express();
-app.use('/', routes);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // view engine setup

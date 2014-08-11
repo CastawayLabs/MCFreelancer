@@ -1,3 +1,8 @@
+var mongoose = require('mongoose');
+
+var schema = mongoose.Schema;
+var ObjectId = schema.ObjectId;
+
 var scheme = schema({
 	project: {
 		type: ObjectId,
@@ -11,3 +16,5 @@ var scheme = schema({
 		ref: 'Message'
 	}]
 });
+
+exports.ProjectQuote = mongoose.model("ProjectQuote", scheme);
