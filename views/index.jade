@@ -4,384 +4,211 @@ block stylesheets
   link(rel='stylesheet', href='/css/index.css')
 
 block scripts
-  script(src='js/index.js')
+  script(src='/js/index.js')
 
 block content
   #content-index
-    //- data-interval=false prevents carousel from auto-rotating, use for debug only
-    //- set to non-zero integer (milisecond) to make the carousel cycle again
-    //-----------------------------------------------------------------------------------------------------CAROUSEL
-    div(data-ride='carousel', data-interval='5000').carousel.slide#carousel-featured
-      ol.carousel-indicators
-        li(data-target='#carousel-featured', data-slide-to='0').active
-        li(data-target='#carousel-featured', data-slide-to='1')
-        li(data-target='#carousel-featured', data-slide-to='2')
-        li(data-target='#carousel-featured', data-slide-to='3')
-        li(data-target='#carousel-featured', data-slide-to='4')
-        li(data-target='#carousel-featured', data-slide-to='5')
-        li(data-target='#carousel-featured', data-slide-to='6')
-        li(data-target='#carousel-featured', data-slide-to='7')
-        li(data-target='#carousel-featured', data-slide-to='8')
-      //- We need 9 different 'featured'
-      //- Replace item backgrounds with nice backgrounds
-      //- Replace placeholder images with user avatars/logos
-      .carousel-inner
-        //-------------------SLIDE-1
-        .item.bg1.active
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-2
-        .item.bg2
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-3
-        .item.bg3
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-4
-        .item.bg1
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-5
-        .item.bg2
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-6
-        .item.bg3
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-7
-        .item.bg1
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-8
-        .item.bg2
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-        //-------------------SLIDE-9
-        .item.bg3
-          .container
-            .item-inner
-              .item-content
-                .row
-                  .col-md-3
-                    a(href='#').thumbnail
-                      img(src='http://placehold.it/200x200/39dbac/ffffff').img-circle
-                  .col-md-9.text-right
-                    h4 Freelancer/Servername
-                    .rating-block
-                      span Rating:
-                      //- Replace with actual rating later
-                      -var userRating = 8.5;
-                      -var p = userRating * 10;
-                      .progress
-                        if (userRating <= 4)
-                          .progress-bar.progress-bar-danger(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 4 && userRating <= 7.5)
-                          .progress-bar.progress-bar-warning(style="width: #{p}%;")
-                            | #{userRating}/10
-                        else if (userRating > 7.5)
-                          .progress-bar.progress-bar-success(style="width: #{p}%;")
-                            | #{userRating}/10
-                    .description
-                      p.text-justify
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        | sed tortor adipiscing, rhoncus risus id, laoreet mauris. Vestibulum
-                        | id est a quam pulvinar sodales eget quis ipsum. Mauris consectetur
-                        | mi quis egestas varius. Integer placerat turpis eget ligula
-                        | dignissim venenatis a vitae justo. Nulla molestie vehicula lacinia.
-      a(role='button', data-slide='prev', href='#carousel-featured').carousel-control.left
-        span.glyphicon.glyphicon-chevron-left
-      a(role='button', data-slide='next', href='#carousel-featured').carousel-control.right
-        span.glyphicon.glyphicon-chevron-right
-    //--------------------------------------------------------------------------------------------------------STATS
-    #stats-container
-      -var programmers = 0;
-      -var moderators = 0;
-      -var managers = 0;
-      -var webdevs = 0;
-      -var totalUsers = 0;
-      -var completedProjects = 0;
+    #section-main
       .container
         .row
-          .col-md-2
-            a(href='#').cat-thumb
-              img(src='icons/pc.svg')
-            h4.cat-count #{programmers}
-            p.cat-title Server Developers
-          .col-md-2
-            a(href='#').cat-thumb
-              img(src='icons/clipboard.svg')
-            h4.cat-count #{moderators}
-            p.cat-title Server Staff
-          .col-md-2
-            a(href='#').cat-thumb
-              img(src='icons/settings.svg')
-            h4.cat-count #{managers}
-            p.cat-title Server Managers
-          .col-md-2
-            a(href='#').cat-thumb
-              img(src='icons/user-interface.svg')
-            h4.cat-count #{webdevs}
-            p.cat-title Web Developers
-          .col-md-4.text-left
-            h4.cat-count
-              span.icomoon-users
-              |  #{totalUsers}
-              span.follow  users have joined
-            h4.cat-count
-              span.icomoon-signup
-              |  #{completedProjects}
-              span.follow  projects have been completed
-    //-------------------------------------------------------------------------------------------------HOW IT WORKS
-    #how-it-works
-      .container
+          .col-md-6
+            h3.slogan Lorem ipsum dolor sit amet!
+            p.text-justify.highlight
+              | Minus corrupti eos rerum  omnis alias cumque. Blanditiis totam
+              | aut dolorum iure debitis sed numquam eaque. Ipsa deleniti ab a
+              | dicta  quae  at  assumenda. Assumenda  asperiores  alias  quia
+              | tenetur qui quis. Error ut exercitationem ipsam provident!
         .row
           .col-md-4
-            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
-              data-content='Lorem ipsum dolor set amet.').btn.btn-inverse.btn-hg.btn-embossed.btn-block
-                span.icomoon-users-2
-                |  Hire
-          .col-md-4
-            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
-              data-content='Lorem ipsum dolor set amet.').btn.btn-info.btn-hg.btn-embossed.btn-block
-                span.icomoon-bubbles-4
-                |  Collaborate
-          .col-md-4
-            a(href='#', data-toggle='popover', data-placement='top', data-trigger='hover', data-container='body',
-              data-content='Lorem ipsum dolor set amet.').btn.btn-success.btn-hg.btn-embossed.btn-block
-                span.icomoon-paypal-3
-                |  Pay Safely
+            //- mini stats area
+            //- link to full stats page
+          .col-md-8
+            .carousel.slide(data-ride='carousel', data-interval='8000')#carousel-featured
+              ol.carousel-indicators
+                li(data-target='#carousel-featured', data-slide-to='0').active
+                li(data-target='#carousel-featured', data-slide-to='1')
+                li(data-target='#carousel-featured', data-slide-to='2')
+                li(data-target='#carousel-featured', data-slide-to='3')
+                li(data-target='#carousel-featured', data-slide-to='4')
+                li(data-target='#carousel-featured', data-slide-to='5')
+                li(data-target='#carousel-featured', data-slide-to='6')
+                li(data-target='#carousel-featured', data-slide-to='7')
+                li(data-target='#carousel-featured', data-slide-to='8')
+              //-------------------------------------------------------
+              .carousel-inner
+                .item.active
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/1abc9c/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Andrew Canning
+                          p.featured-subtitle Server Developer
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Officiis veniam  molestiae dolor  omnis ullam.  Velit eligendi
+                            | blanditiis commodi  distinctio. Ex  sit ut  odit quia  qui aut
+                            | quibusdam. Non  vel voluptatem hic. Velit  deserunt voluptates
+                            | et sit atque voluptas consequuntur enim.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/16a085/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title The Red Keep
+                          p.featured-subtitle Minecraft Servers
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Ad   pariatur  vero   similique  officia   numquam  blanditiis
+                            | similique ipsam.  Consequuntur quod porro eveniet.  Earum quod
+                            | facilis nam  consequatur nemo et  soluta error. Rerum  sed cum
+                            | laboriosam officiis molestiae. Aut autem quidem maxime.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/d35400/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Codey Marshall
+                          p.featured-subtitle Server Admin
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Officiis veniam  molestiae dolor  omnis ullam.  Velit eligendi
+                            | blanditiis commodi  distinctio. Ex  sit ut  odit quia  qui aut
+                            | quibusdam. Non  vel voluptatem hic. Velit  deserunt voluptates
+                            | et sit atque voluptas consequuntur enim.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/2ecc71/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Tajana Matijević
+                          p.featured-subtitle Expert Moderator
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Ad   pariatur  vero   similique  officia   numquam  blanditiis
+                            | similique ipsam.  Consequuntur quod porro eveniet.  Earum quod
+                            | facilis nam  consequatur nemo et  soluta error. Rerum  sed cum
+                            | laboriosam officiis molestiae. Aut autem quidem maxime.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/27ae60/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Programmers' Creed
+                          p.featured-subtitle Development Company
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Officiis veniam  molestiae dolor  omnis ullam.  Velit eligendi
+                            | blanditiis commodi  distinctio. Ex  sit ut  odit quia  qui aut
+                            | quibusdam. Non  vel voluptatem hic. Velit  deserunt voluptates
+                            | et sit atque voluptas consequuntur enim.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/3498db/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Kerstin Becker
+                          p.featured-subtitle Server Developer
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Ad   pariatur  vero   similique  officia   numquam  blanditiis
+                            | similique ipsam.  Consequuntur quod porro eveniet.  Earum quod
+                            | facilis nam  consequatur nemo et  soluta error. Rerum  sed cum
+                            | laboriosam officiis molestiae. Aut autem quidem maxime.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/9b59b6/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Juan Estévez Castellano
+                          p.featured-subtitle Server Admin
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Officiis veniam  molestiae dolor  omnis ullam.  Velit eligendi
+                            | blanditiis commodi  distinctio. Ex  sit ut  odit quia  qui aut
+                            | quibusdam. Non  vel voluptatem hic. Velit  deserunt voluptates
+                            | et sit atque voluptas consequuntur enim.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/e67e22/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Ruku Shiteka
+                          p.featured-subtitle Web Developer
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Ad   pariatur  vero   similique  officia   numquam  blanditiis
+                            | similique ipsam.  Consequuntur quod porro eveniet.  Earum quod
+                            | facilis nam  consequatur nemo et  soluta error. Rerum  sed cum
+                            | laboriosam officiis molestiae. Aut autem quidem maxime.
+                .item
+                  .item-inner
+                    .item-content
+                      .row
+                        .col-md-3
+                          a(href='#').thumbnail
+                            img(src='http://placehold.it/200x200/e74c3c/ffffff').img-circle
+                        .col-md-9
+                          p.featured-title Quotedox LLC
+                          p.featured-subtitle Service Providers
+                          .rating-block
+                            .progress
+                              .progress-bar.progress-bar-success(style="width: 85%;")
+                                | 8.5
+                          p.featured-description
+                            | Officiis veniam  molestiae dolor  omnis ullam.  Velit eligendi
+                            | blanditiis commodi  distinctio. Ex  sit ut  odit quia  qui aut
+                            | quibusdam. Non  vel voluptatem hic. Velit  deserunt voluptates
+                            | et sit atque voluptas consequuntur enim.
+              //------------------------------------------------------
+              a.left.carousel-control(role='button', data-slide='prev', href='#carousel-featured')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(role='button', data-slide='next', href='#carousel-featured')
+                span.glyphicon.glyphicon-chevron-right

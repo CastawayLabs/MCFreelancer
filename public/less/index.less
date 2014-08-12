@@ -6,24 +6,64 @@
 @import "flat-ui/variables.less";
 @import "bootstrap/mixins.less";
 
-#content-index {
-  margin-top: @navbar-height-base;
+.highlight {
+  color: @sun-flower;
+}
 
-  .container {
-    max-width: 900px;
-  }
+#navbar-main.txp {
+  background: transparent;
+}
+
+#content-index {
+
+}
+
+#section-main {
+  min-height: 640px; // temp(dbg)
+
+  padding-top: (2 * @navbar-height-base);
+  background-color: @gray-lighter;
+  background-image: url('../images/stock/mac-developer.jpg');
+  background-size: 100%;
+  background-position: center center;
+  color: #fff;
 }
 
 #carousel-featured {
-  height: 480px;
-  margin-top: @navbar-height-base;
+  height: 320px;
+
+  .carousel-control {
+    background: transparent;
+    width: 32px;
+    font-size: 16px;
+    z-index: 2;
+  }
 
   .item {
     height: 100%;
     padding: @navbar-height-base;
 
-    // This whole charade is for vertically centering
-    // slide content within the slide
+    // chage transition from slide to fade
+    opacity: 0;
+    .transition(opacity 1s);
+
+    &.active {
+      opacity: 1;
+
+      &.left,
+      &.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+
+    &.next.left,
+    &.prev.right {
+      opacity: 1;
+    }
+
+    // vertically center the content carousel items
     .item-inner {
       width: 100%;
       height: 100%;
@@ -47,105 +87,29 @@
           border-radius: 100%;
         }
 
-        .progress {
-          display: inline-block;
-          width: 65%;
-          margin: 0;
-          margin-left: 1%;
+        p.featured-title {
+          font-size: (@font-size-base * 1.5);
+          line-height: 1.1;
+          margin: 0; padding: 0;
         }
 
-        .description > p {
-          margin-top: (@navbar-height-base / 2);
+        p.featured-subtitle {
+          font-size: (@font-size-base * 0.85);
+          line-height: 1.1;
+          margin: 0; padding: 0;
+        }
+
+        .rating-block {
+          display: block;
+          width: 75%;
+          margin-top: 6px;
+          margin-bottom: @font-size-base;
+        }
+
+        .featured-description {
           font-size: (@font-size-base * 0.85);
         }
       }
     }
-
-    &.bg1 {
-      background-image: url('../images/sliderbg_1.jpg');
-      color: #fff;
-    }
-    &.bg2 {
-      background-image: url('../images/sliderbg_2.jpg');
-    }
-    &.bg3 {
-      background-image: url('../images/sliderbg_3.jpg');
-    }
   }
-}
-
-#stats-container {
-  background-color: mix(@brand-primary, @inverse, 9%);
-  .row {
-    padding-top: @navbar-height-base;
-    padding-bottom: @navbar-height-base;
-
-    [class^='col-'] {
-      text-align: center;
-      border-right: 1px solid darken(mix(@brand-primary, @inverse, 9%), 10%);
-      border-left: 1px solid lighten(mix(@brand-primary, @inverse, 9%), 10%);
-
-      &:first-child {
-        border-left: none;
-      }
-
-      &:last-child {
-        border-right: none;
-      }
-
-      &.text-left {
-        text-align: left !important;
-      }
-    }
-
-    a.cat-thumb {
-      display: block;
-      img {
-        height: 56px;
-      }
-    }
-
-    h4.cat-count {
-      margin-bottom: 0;
-      color: @brand-secondary; // change this in view w.r.t. strength
-
-      & > span.follow { // mostly temporary fixes. TODO: find permanent solution
-        font-size: 12px;
-        background: @brand-primary;
-        color: #fff;
-        padding: 6px 12px;
-        border-radius: @border-radius-base;
-        vertical-align: middle;
-        margin-left: 12px;
-        line-height: 1.4;
-        font-weight: normal;
-      }
-    }
-
-    p.cat-title {
-      font-size: 12px;
-      background: @brand-primary;
-      color: #fff;
-      padding: 2px;
-      border-radius: @border-radius-base;
-    }
-  }
-}
-
-#how-it-works {
-  background-color: mix(@brand-primary, @inverse, 9%);
-
-  .row {
-    padding-top: @navbar-height-base;
-    padding-bottom: @navbar-height-base;
-  }
-
-  a[data-toggle='popover'] {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-}
-
-footer {
-  //margin-top: @navbar-height-base;
 }
