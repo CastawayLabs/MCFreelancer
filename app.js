@@ -28,24 +28,11 @@ app.set('view engine', 'jade');
 
 // Middleware
 app.use(logger(config.production ? 'default' : 'dev'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-
-app.use(cookieParser());
-
-// Routes
-app.use(routes.router);
-
-// less support on the fly
-// this is *a bit* messy
-app.use(lessMiddleware(config.publicPath, 'less'), {
-  // display debug info if in dev mode
-  debug: config.production ? false : true,
+app.use(lessMiddleware(path.join(__dirname, 'public', 'less'),{
+  debug: app.get('env') === 'development' ? true : false,
+  force: app.get('env') === 'development' ? true : false,
+  once: app.get('env') === 'production' ? true : false,
   dest: path.join(__dirname, 'public'),
-  force: config.production ? false : true,
-  once: config.production ? true : false,
-  // see: http://git.io/x_5jrw
   preprocess: {
     path: function (pathname) {
       if (path.sep === '\\') {
@@ -55,7 +42,15 @@ app.use(lessMiddleware(config.publicPath, 'less'), {
       }
     }
   }
-});
+}));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
+app.use(cookieParser());
+
+// Routes
+app.use(routes.router);
 
 // Static stuff
 app.use(express.static(config.publicPath));
